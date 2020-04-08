@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <div >
+        <SideBar></SideBar>
+        <ProfileBar></ProfileBar>
+        <TipBar></TipBar>
+      </div>
   </div>
 </template>
 
 <script>
 
+import TipBar from "./components/content/TipBar";
+import SideBar from "./components/common/SideBar";
+import ProfileBar from "./components/content/ProfileBar";
 
 export default {
   name: 'App',
   components: {
-
+    ProfileBar,
+    SideBar,
+    TipBar,
   }
 }
 </script>
@@ -20,4 +28,5 @@ export default {
 #app {
 
 }
+
 </style>
