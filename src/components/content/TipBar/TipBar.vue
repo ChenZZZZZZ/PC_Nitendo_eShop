@@ -39,7 +39,7 @@ import CircleButton from "./CircleButton";
   display: inline-block;
   font-weight: bold;
   font-size: 24px;
-  margin-left: 40px;
+  margin-left: 140px;
   padding-top: 10px;
 }
 .tip_button span{
@@ -56,11 +56,11 @@ import CircleButton from "./CircleButton";
   float: right;
 }
 .tip_bar{
-  background-color: beige;
   height: 54px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  width: 1520px;
+  width: 100%;
+  background-color: #f1f1f1;
 }
 
 </style>
