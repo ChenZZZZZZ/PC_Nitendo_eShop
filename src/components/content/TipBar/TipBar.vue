@@ -1,11 +1,10 @@
-
-
+//底部提示栏
 <template>
 	<div class="tip_bar">
     <div class="tip_logo">
       Nintendo Switch
     </div>
-    <div class="tip_button">
+    <div class="tip_button" @click="back">
       <CircleButton><p>X</p></CircleButton>
       <span>结束</span>
       <CircleButton><p>B</p></CircleButton>
@@ -28,7 +27,13 @@ import CircleButton from "./CircleButton";
     components: {
       CircleButton
 
-		}
+		},
+    //只加了一个返回首页的功能
+    methods: {back: function () {
+        this.$router.push('/recent_releases')
+        this.$store.state.title = 'NEW'
+      }
+    }
   }
 
 
@@ -54,6 +59,7 @@ import CircleButton from "./CircleButton";
 }
 .tip_button{
   float: right;
+  cursor: pointer;
 }
 .tip_bar{
   height: 54px;
@@ -61,6 +67,7 @@ import CircleButton from "./CircleButton";
   bottom: 0;
   width: 100%;
   background-color: #f1f1f1;
+  z-index: 9;
 }
 
 </style>

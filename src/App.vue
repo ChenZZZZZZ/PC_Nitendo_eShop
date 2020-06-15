@@ -10,12 +10,18 @@
 
 <script>
 
-import TipBar from "./components/content/TipBar";
-import SideBar from "./components/common/SideBar";
-import ProfileBar from "./components/content/ProfileBar";
+import TipBar from "./components/content/TipBar/TipBar";
+import SideBar from "./components/content/SideBar/SideBar";
+import ProfileBar from "./components/content/ProfileBar/ProfileBar";
+
 
 export default {
   name: 'App',
+  data(){
+    return{
+      title:""
+    }
+  },
   components: {
     ProfileBar,
     SideBar,
